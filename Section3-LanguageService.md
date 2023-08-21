@@ -1,5 +1,5 @@
 # Segment 3: Language Service
-[link](link)
+[Microsoft Learn: Language Service](https://learn.microsoft.com/en-us/training/paths/process-translate-text-azure-cognitive-services/)
 ## Extracting insights from textusing the Language Service
 
 Every day, the world generates a vast quantity of data; much of it text-based in the form of emails, social media posts, online reviews, business documents, and more. Artificial intelligence techniques that apply statistical and semantic models enable you to create applications that extract meaning and insights from this text-based data.
