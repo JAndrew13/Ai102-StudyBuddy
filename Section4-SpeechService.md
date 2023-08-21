@@ -1,31 +1,31 @@
-Create speech-enabled apps with the Speech service
+# Section 4: Create speech-enabled apps with the Speech service
 
 The Speech service enables you to build speech-enabled applications. This module focuses on using the speech-to-text and text to speech APIs, which enable you to create apps that are capable of speech recognition and speech synthesis.
 
-Learning objectives
+## Learning objectives
 In this module, you'll learn how to:
 
-Provision an Azure resource for the Speech service
-Use the Speech to text API to implement speech recognition
-Use the Text to speech API to implement speech synthesis
-Configure audio format and voices
-Use Speech Synthesis Markup Language (SSML)
+* Provision an Azure resource for the Speech service
+* Use the Speech to text API to implement speech recognition
+* Use the Text to speech API to implement speech synthesis
+* Configure audio format and voices
+* Use Speech Synthesis Markup Language (SSML)
 
 The Speech service provides APIs that you can use to build speech-enabled applications. Specifically, the Speech service supports:
 
-speech to text: An API that enables speech recognition in which your application can accept spoken input.
+* speech to text: An API that enables speech recognition in which your application can accept spoken input.
 
-Text to speech: An API that enables speech synthesis in which your application can provide spoken output.
+* Text to speech: An API that enables speech synthesis in which your application can provide spoken output.
 
-Speech Translation: An API that you can use to translate spoken input into multiple languages.
+* Speech Translation: An API that you can use to translate spoken input into multiple languages.
 
-Speaker Recognition: An API that enables your application to recognize individual speakers based on their voice.
+* Speaker Recognition: An API that enables your application to recognize individual speakers based on their voice.
 
-Intent Recognition: An API that integrates with the Language Understanding service to determine the semantic meaning of spoken input.
+* Intent Recognition: An API that integrates with the Language Understanding service to determine the semantic meaning of spoken input.
 
 This module focuses on speech recognition and speech synthesis, which are core capabilities of any speech-enabled application.
 
-> Provision an Azure resource for speech
+## Provision an Azure resource for speech
 
 Before you can use the Speech service, you need to create a Speech resource in your Azure subscription. You can use either a dedicated Speech resource or a multi-service Cognitive Services resource.
 
@@ -35,7 +35,7 @@ The location in which the resource is deployed (for example, eastus)
 One of the keys assigned to your resource.
 You can view of these values on the Keys and Endpoint page for your resource in the Azure portal.
 
-> Use the Speech to text API
+## Use the Speech to text API
 
 The Speech service supports speech recognition through two REST APIs:
 
@@ -45,10 +45,10 @@ You can use either API for interactive speech recognition, depending on the expe
 
 You can learn more about the REST APIs in the Azure Speech to text REST API documentation. In practice, most interactive speech-enabled applications use the Speech service through a (programming) language-specific SDK.
 
-> Using the Speech SDK
+## Using the Speech SDK
 While the specific details vary, depending on the SDK being used (Python, C#, and so on); there's a consistent pattern for using the Speech to text API:
 
-https://learn.microsoft.com/en-us/training/wwl-data-ai/transcribe-speech-input-text/media/speech-to-text.png
+![img](https://github.com/JAndrew13/ai102/blob/main/speech-to-text.png)
 
 Use a SpeechConfig object to encapsulate the information required to connect to your Speech resource. Specifically, its location and key.
 
@@ -59,35 +59,35 @@ Use the SpeechConfig and AudioConfig to create a SpeechRecognizer object. This o
 Use the methods of the SpeechRecognizer object to call the underlying API functions. For example, the RecognizeOnceAsync() method uses the Speech service to asynchronously transcribe a single spoken utterance.
 
 Process the response from the Speech service. In the case of the RecognizeOnceAsync() method, the result is a SpeechRecognitionResult object that includes the following properties:
-Duration
-OffsetInTicks
-Properties
-Reason
-ResultId
-Text
+* Duration
+* OffsetInTicks
+* Properties
+* Reason
+* ResultId
+* Text
 
 If the operation was successful, the Reason property has the enumerated value RecognizedSpeech, and the Text property contains the transcription. Other possible values for Result include NoMatch (indicating that the audio was successfully parsed but no speech was recognized) or Canceled, indicating that an error occurred (in which case, you can check the Properties collection for the CancellationReason property to determine what went wrong.)
 
-> Configure audio format and voices
+## Configure audio format and voices
 
 When synthesizing speech, you can use a SpeechConfig object to customize the audio that is returned by the Speech service.
 
-> Audio format
+### Audio format
 
 The Speech service supports multiple output formats for the audio stream that is generated by speech synthesis. Depending on your specific needs, you can choose a format based on the required:
 
-Audio file type
-Sample-rate
-Bit-depth
+* Audio file type
+* Sample-rate
+* Bit-depth
 The supported formats are indicated in the SDK using the SpeechSynthesisOutputFormat enumeration. For example, SpeechSynthesisOutputFormat.Riff24Khz16BitMonoPcm.
 
 To specify the required output format, use the SetSpeechSynthesisOutputFormat method of the SpeechConfig object:
-
+```
 speechConfig.SetSpeechSynthesisOutputFormat(SpeechSynthesisOutputFormat.Riff24Khz16BitMonoPcm);
-
+```
 For a full list of supported formats and their enumeration values, see the Speech SDK documentation.
 
-> Voices
+## Voices
 The Speech service provides multiple voices that you can use to personalize your speech-enabled applications. There are two kinds of voice that you can use:
 
 Standard voices - synthetic voices created from audio samples.
@@ -95,10 +95,10 @@ Neural voices - more natural sounding voices created using deep neural networks.
 Voices are identified by names that indicate a locale and a person's name - for example en-GB-George.
 
 To specify a voice for speech synthesis in the SpeechConfig, set its SpeechSynthesisVoiceName property to the voice you want to use:
-
+```
 speechConfig.SpeechSynthesisVoiceName = "en-GB-George";
-
-> Use Speech Synthesis Markup Language
+```
+## Use Speech Synthesis Markup Language
 
 While the Speech SDK enables you to submit plain text to be synthesized into speech (for example, by using the SpeakTextAsync() method), the service also supports an XML-based syntax for describing characteristics of the speech you want to generate. This Speech Synthesis Markup Language (SSML) syntax offers greater control over how the spoken output sounds, enabling you to:
 
@@ -109,7 +109,7 @@ Adjust the prosody of the voice (affecting the pitch, timbre, and speaking rate)
 Use common "say-as" rules, for example to specify that a given string should be expressed as a date, time, telephone number, or other form.
 Insert recorded speech or audio, for example to include a standard recorded message or simulate background noise.
 For example, consider the following SSML:
-
+```
 <speak version="1.0" xmlns="http://www.w3.org/2001/10/synthesis" 
                      xmlns:mstts="https://www.w3.org/2001/mstts" xml:lang="en-US"> 
     <voice name="en-US-AriaNeural"> 
@@ -122,11 +122,13 @@ For example, consider the following SSML:
         <break strength="weak"/>Lets call the whole thing off! 
     </voice> 
 </speak>
-
+```
 This SSML specifies a spoken dialog between two different neural voices, like this:
-
+```
 Ariana (cheerfully): "I say tomato:
 Guy: "I say tomato (pronounced tom-ah-toe) ... Let's call the whole thing off!"
+```
 To submit an SSML description to the Speech service, you can use the SpeakSsmlAsync() method, like this:
-
+```
 speechSynthesizer.SpeakSsmlAsync(ssml_string);
+```
