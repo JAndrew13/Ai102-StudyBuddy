@@ -24,7 +24,7 @@ Sentiment analysis - quantifying how positive or negative the text is.
 Named entity recognition - detecting references to entities, including people, locations, time periods, organizations, and more.
 Entity linking - identifying specific entities by providing reference links to Wikipedia articles.
 
-https://learn.microsoft.com/en-us/training/wwl-data-ai/extract-insights-text-with-text-analytics-service/media/text-analytics-resource.png
+![text-analyitics-resource](https://learn.microsoft.com/en-us/training/wwl-data-ai/extract-insights-text-with-text-analytics-service/media/text-analytics-resource.png)
 
 Azure resources for text analysis
 To use the Language service to analyze text, you must provision a resource for it in your Azure subscription. You can provision a single-service Language resource, or you can use a multi-service Cognitive Services resource.
