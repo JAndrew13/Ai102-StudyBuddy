@@ -105,7 +105,7 @@ For a full walkthrough of each step with example requests, see the [conversation
 
 For a more visual method of building, training, and deploying your model, you can use Language Studio to achieve each of these steps. On the main page, you can select which type of project you want to create. Once the project is created, then go through the same process as above to build, train, and deploy your model.
 
-![img](https://learn.microsoft.com/en-us/training/modules/build-language-understanding-model/2-understand-resources-for-building)
+![img](https://learn.microsoft.com/en-us/training/wwl-data-ai/build-language-understanding-model/media/language-studio-conversational.png)
 The lab in this module will walk through using Language Studio to build your model. If you'd like to learn more, see the
 [Language Studio quickstart](https://learn.microsoft.com/en-us/azure/ai-services/language-service/language-studio)
 
