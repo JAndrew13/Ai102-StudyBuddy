@@ -27,6 +27,7 @@ A text guide to the ai-102 course offered by Microsoft
 * [Ai102 - Conversational Ai](https://learn.microsoft.com/en-us/shows/exam-readiness-zone/preparing-for-ai-102-implement-conversational-ai-solutions-5-of-5)
 
 ## Useful Links
+* [Azure Ai Services Docs](https://learn.microsoft.com/en-us/azure/ai-services/what-are-ai-services)
 * [Azure Speech-To-Text REST API Documentation](https://learn.microsoft.com/en-us/azure/ai-services/speech-service/rest-speech-to-text)
 * [Azure Speech SDK](https://learn.microsoft.com/en-us/dotnet/api/microsoft.cognitiveservices.speech.speechsynthesisoutputformat?view=azure-dotnet)
 
