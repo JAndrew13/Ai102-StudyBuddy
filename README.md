@@ -19,7 +19,7 @@ A text guide to the ai-102 course offered by Microsoft
 ## Practice Exam (50 Questions)
 * [Microsoft Azure Ai-102 Practice Exam](https://learn.microsoft.com/en-us/credentials/certifications/exams/ai-102/practice/assessment?assessment-type=practice&assessmentId=61)
 
-## Exam Prep Videos 1-5
+## Exam Prep Videos 1-5 (High Level Overview) 🔥🔥🔥
 * [Ai102 - Plan & Manage Ai Solutions](https://learn.microsoft.com/en-us/shows/exam-readiness-zone/preparing-for-ai-102-plan-and-manage-an-azure-ai-solution-1-of-5)
 * [Ai102 - Image & Video Processing](https://learn.microsoft.com/en-us/shows/exam-readiness-zone/preparing-for-ai-102-implement-image-and-video-processing-solutions-2-of-5)
 * [Ai102 - Natural Language Processing](https://learn.microsoft.com/en-us/shows/exam-readiness-zone/preparing-for-ai-102-implement-natural-language-processing-solutions-3-of-5)
