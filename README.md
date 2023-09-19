@@ -16,6 +16,16 @@ A text guide to the ai-102 course offered by Microsoft
 * [Section 12: Developing Ai Solutions](https://learn.microsoft.com/en-us/training/paths/develop-ai-solutions-azure-openai/)
 * [Section 13: Transcribing Speech](https://learn.microsoft.com/en-us/training/modules/transcribe-speech-input-text/7-exercise-speech-app)
 
+## Practice Exam (50 Questions)
+* [Microsoft Azure Ai-102 Practice Exam](https://learn.microsoft.com/en-us/credentials/certifications/exams/ai-102/practice/assessment?assessment-type=practice&assessmentId=61)
+
+## Exam Prep Videos 1-5
+* [Ai102 - Plan & Manage Ai Solutions](https://learn.microsoft.com/en-us/shows/exam-readiness-zone/preparing-for-ai-102-plan-and-manage-an-azure-ai-solution-1-of-5)
+* [Ai102 - Image & Video Processing](https://learn.microsoft.com/en-us/shows/exam-readiness-zone/preparing-for-ai-102-implement-image-and-video-processing-solutions-2-of-5)
+* [Ai102 - Natural Language Processing](https://learn.microsoft.com/en-us/shows/exam-readiness-zone/preparing-for-ai-102-implement-natural-language-processing-solutions-3-of-5)
+* [Ai102 - Knowledge Mining](https://learn.microsoft.com/en-us/shows/exam-readiness-zone/preparing-for-ai-102-implement-knowledge-mining-solutions-4-of-5)
+* [Ai102 - Conversational Ai](https://learn.microsoft.com/en-us/shows/exam-readiness-zone/preparing-for-ai-102-implement-conversational-ai-solutions-5-of-5)
+
 ## Useful Links
 * [Azure Speech-To-Text REST API Documentation](https://learn.microsoft.com/en-us/azure/ai-services/speech-service/rest-speech-to-text)
 * [Azure Speech SDK](https://learn.microsoft.com/en-us/dotnet/api/microsoft.cognitiveservices.speech.speechsynthesisoutputformat?view=azure-dotnet)
